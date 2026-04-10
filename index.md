@@ -1,77 +1,84 @@
 ---
-title: "Practical Notes on Data, AI, and Cloud"
-layout: home
+title: ""
+layout: single
 author_profile: false
-header:
-  overlay_filter: 0
-excerpt: "A clean GitHub Pages blog for practical writing, experiments, and project notes."
+classes: wide
+permalink: /
 ---
 
-<div class="home-shell">
-  <section class="landing-hero">
-    <div class="landing-hero__content">
-      <span class="landing-badge">Adithya's learning journal</span>
-      <h2>Practical notes on data, AI, and cloud.</h2>
-      <p>
-        This blog is built for readable technical writing, clearer visual structure, and simple GitHub Pages publishing.
-      </p>
-      <div class="landing-actions">
-        <a class="btn btn--primary" href="{{ '/blog/' | relative_url }}">Read the blog</a>
-        <a class="btn btn--light-outline" href="{{ '/about/' | relative_url }}">About me</a>
-      </div>
-    </div>
-
-    <aside class="landing-profile">
-      <div class="landing-profile__card">
-        <p class="landing-profile__eyebrow">Focus</p>
-        <h3>Data Science, AI, and Cloud</h3>
-        <p>Writing about concepts, experiments, deployments, and lessons learned while building in public.</p>
-        <ul class="landing-profile__meta">
-          <li>Based in India</li>
-          <li>Published with Jekyll + GitHub Pages</li>
-          <li>Structured for long-form technical notes</li>
-        </ul>
-      </div>
-    </aside>
-  </section>
-
-  <section class="landing-strip">
-    <div class="landing-strip__item">
-      <span class="landing-strip__value">AI</span>
-      <span class="landing-strip__label">Experiments</span>
-    </div>
-    <div class="landing-strip__item">
-      <span class="landing-strip__value">Cloud</span>
-      <span class="landing-strip__label">Deployment Notes</span>
-    </div>
-    <div class="landing-strip__item">
-      <span class="landing-strip__value">Data</span>
-      <span class="landing-strip__label">Project Breakdowns</span>
-    </div>
-  </section>
-
-  ## What you'll find here
-
-  <section class="topic-grid">
-    <div class="topic-card">
-      <strong>Data Science</strong>
-      <span>Concept explainers, dataset notes, notebooks, and practical project lessons that stay easy to revisit later.</span>
-    </div>
-    <div class="topic-card">
-      <strong>Artificial Intelligence</strong>
-      <span>Experiments, implementation notes, model workflows, and learning logs around modern AI tools.</span>
-    </div>
-    <div class="topic-card">
-      <strong>Cloud</strong>
-      <span>Deployment guides, infrastructure notes, and production-friendly workflows for shipping small projects well.</span>
-    </div>
-  </section>
-
-  ## Why this blog exists
-
-  <section class="summary-panel">
+<section class="hero-panel">
+  <div class="hero-panel__main">
+    <span class="hero-panel__badge">Adithya's learning journal</span>
+    <h1>Practical notes on data science, AI, and cloud.</h1>
     <p>
-      The goal is simple: make technical learning easier to publish and easier to read. Posts are written in Markdown, version-controlled on GitHub, and deployed through GitHub Pages so the site stays lightweight and maintainable.
+      A cleaner GitHub Pages blog for technical writing, experiments, deployment notes, and project breakdowns.
     </p>
-  </section>
-</div>
+    <div class="hero-panel__actions">
+      <a class="btn btn--primary" href="{{ '/blog/' | relative_url }}">Read posts</a>
+      <a class="btn btn--light-outline" href="{{ '/about/' | relative_url }}">About me</a>
+    </div>
+  </div>
+
+  <div class="hero-panel__side">
+    <p class="hero-panel__eyebrow">Focus</p>
+    <h2>Readable, simple, and deployable.</h2>
+    <ul class="hero-panel__list">
+      <li>Data science notes and concept explainers</li>
+      <li>AI experiments and implementation logs</li>
+      <li>Cloud deployment and production workflows</li>
+    </ul>
+  </div>
+</section>
+
+<section class="feature-row">
+  <div class="feature-card">
+    <span class="feature-card__title">AI</span>
+    <span class="feature-card__text">Experiments and workflow notes</span>
+  </div>
+  <div class="feature-card">
+    <span class="feature-card__title">Cloud</span>
+    <span class="feature-card__text">Deployment guides and infra learnings</span>
+  </div>
+  <div class="feature-card">
+    <span class="feature-card__title">Data</span>
+    <span class="feature-card__text">Projects, notebooks, and practical lessons</span>
+  </div>
+</section>
+
+<section class="topic-section">
+  <h2>What you'll find here</h2>
+  <div class="topic-grid">
+    <article class="topic-card">
+      <strong>Data Science</strong>
+      <p>Concept explainers, datasets, notebooks, analysis walkthroughs, and practical project lessons.</p>
+    </article>
+    <article class="topic-card">
+      <strong>Artificial Intelligence</strong>
+      <p>Experiments, implementation notes, model workflows, and learning logs around modern AI tools.</p>
+    </article>
+    <article class="topic-card">
+      <strong>Cloud</strong>
+      <p>Deployment guides, infrastructure notes, and production-friendly workflows for small projects.</p>
+    </article>
+  </div>
+</section>
+
+<section class="summary-panel">
+  <h2>Why this blog exists</h2>
+  <p>
+    The goal is simple: make technical learning easier to publish and easier to read. Posts are written in Markdown, version-controlled on GitHub, and deployed through GitHub Pages.
+  </p>
+</section>
+
+<section class="recent-posts">
+  <h2>Recent posts</h2>
+  <div class="recent-posts__grid">
+    {% for post in site.posts limit:3 %}
+    <article class="recent-post">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="recent-post__meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
