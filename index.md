@@ -1,4 +1,5 @@
-title: ""
+---
+title: "Practical Notes on Data, AI, and Cloud"
 layout: home
 author_profile: false
 header:
@@ -10,11 +11,10 @@ excerpt: "A clean GitHub Pages blog for practical writing, experiments, and proj
   <section class="landing-hero">
     <div class="landing-hero__content">
       <span class="landing-badge">Adithya's learning journal</span>
-      <h1>Practical notes on data, AI, and cloud.</h1>
+      <h2>Practical notes on data, AI, and cloud.</h2>
       <p>
-        This blog is designed for readable technical posts on data science, AI, and cloud, with a cleaner layout, better contrast, and simpler navigation for GitHub Pages.
+        This blog is built for readable technical writing, clearer visual structure, and simple GitHub Pages publishing.
       </p>
-
       <div class="landing-actions">
         <a class="btn btn--primary" href="{{ '/blog/' | relative_url }}">Read the blog</a>
         <a class="btn btn--light-outline" href="{{ '/about/' | relative_url }}">About me</a>
